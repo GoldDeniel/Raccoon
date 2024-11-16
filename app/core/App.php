@@ -2,20 +2,25 @@
 <?php
 
 class App {
-    private function show($e){
-        echo '<pre>';
-        print_r($e);
-        echo '</pre>';
-    }
+    // default, hogy ha nincs megadva controller vagy method
+    private $controller = 'Home';
+    private $method = 'index';
     public function loadController(){
         $URL = explode('/', ($_GET['url'] ?? 'home'));
 
         $filename = '../app/controllers/'.ucfirst($URL[0]).'Controller.php';
         if(file_exists($filename)){
             require $filename;
+            $this->controller = ucfirst($URL[0]); // ha létezik a fájl, akkor a controller neve lesz az első elem
         }
         else{
             require '../app/controllers/_404.php';
+            $this->controller = '_404';
         }
+        $controller = new $this->controller; // aszerint jon letre, hogy milyen controllerrol beszelunk, ha _404, akkor _404(Controller), ha home, akkor HomeController
+        // kerdes a tanar urtol: a php szovegkent ertelmezi a $this->controller-t, nem referencia szerint?
+        $method = $URL[1] ?? 'index'; // ha nincs megadva method, akkor index
+        call_user_func_array([$controller, $method], []);
+
     }
 }
