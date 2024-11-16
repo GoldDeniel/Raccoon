@@ -7,7 +7,7 @@ class App {
     private $method = 'index';
     public function loadController(){
         $URL = explode('/', ($_GET['url'] ?? 'home'));
-
+        
         $filename = '../app/controllers/'.ucfirst($URL[0]).'Controller.php';
         if(file_exists($filename)){
             require $filename;
@@ -19,8 +19,17 @@ class App {
         }
         $controller = new $this->controller; // aszerint jon letre, hogy milyen controllerrol beszelunk, ha _404, akkor _404(Controller), ha home, akkor HomeController
         // kerdes a tanar urtol: a php szovegkent ertelmezi a $this->controller-t, nem referencia szerint?
-        $method = $URL[1] ?? 'index'; // ha nincs megadva method, akkor index
-        call_user_func_array([$controller, $method], []);
+        if(isset($URL[1]) && $URL[1] != ''){
+            if(method_exists($controller, $URL[1])){
+                $this->method = $URL[1];
+            }
+            else{
+                require '../app/controllers/_404.php';
+                $this->controller = '_404';
+                $controller = new $this->controller;
+            }
+        }
+        call_user_func_array([$controller, $this->method], []);
 
     }
 }
