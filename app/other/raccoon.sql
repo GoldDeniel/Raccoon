@@ -7,7 +7,7 @@ GRANT ALL PRIVILEGES ON `Raccoon`.* TO 'Raccoon'@'localhost';
 GRANT ALL PRIVILEGES ON `Raccoon\_%`.* TO 'Raccoon'@'localhost'; 
 
 
-CREATE TABLE `Raccoon`.`Users` (`id` INT NOT NULL AUTO_INCREMENT , `first_name` TEXT NOT NULL , `last_name` TEXT NULL , `password` INT NOT NULL COMMENT 'Hashed password' , `username` TEXT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+CREATE TABLE `Raccoon`.`Users` (`id` INT NOT NULL AUTO_INCREMENT , `first_name` TEXT NOT NULL , `last_name` TEXT NULL , `password` TEXT NOT NULL COMMENT 'Hashed password' , `username` TEXT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
 
 CREATE TABLE `Raccoon`.`Comments` (`id` INT NOT NULL AUTO_INCREMENT , `text` TEXT NOT NULL , `author` INT NOT NULL , `created_at` DATE NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
 
