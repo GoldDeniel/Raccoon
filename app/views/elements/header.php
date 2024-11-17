@@ -1,16 +1,22 @@
+<style>
 
-<header>
-    <nav>
-        <ul>
-            <li><a href="/Raccoon/public/home">Home</a></li>
-            <li><a href="/Raccoon/public/feed">Feed</a></li>
+</style>
+
+<header class="header">
+    <nav class="nav">
+        <div class="nav-container">
+            <a class="nav-link" href="/Raccoon/public/home">Home</a>
+            <a class="nav-link" href="/Raccoon/public/feed">Feed</a>
             <?php if(isset($_SESSION['username'])): ?>
-                <span class="user-info-container"><span class="user-info-static">Logged in as:</span> <span class="user-info-full-name"><?php echo $_SESSION['last_name'].' '.$_SESSION['first_name'].' ('.$_SESSION['username'].')'?></span></span>
-                <li><a href="/Raccoon/public/login/logout">Logout</a></li>
+                <div class="user-info-container">
+                    <span class="user-info-static">Logged in as:</span>
+                    <span class="user-info-full-name"><?php echo $_SESSION['last_name'].' '.$_SESSION['first_name'].' ('.$_SESSION['username'].')'?></span>
+                </div>
+                <a class="nav-link" href="/Raccoon/public/login/logout">Logout</a>
             <?php else: ?>
-                <li><a href="/Raccoon/public/login">Login</a></li>
-                <li><a href="/Raccoon/public/register">Register</a></li>
+                <a class="nav-link" href="/Raccoon/public/login">Login</a>
+                <a class="nav-link" href="/Raccoon/public/register">Register</a>
             <?php endif; ?>
-        </ul>
+        </div>
     </nav>
 </header>

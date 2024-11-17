@@ -2,3 +2,59 @@
 .raccoon-img {
     clip-path: circle(50% at 50% 50%);
 }
+/* Dark-themed header styles */
+body {
+    background-color: black;
+    color: white;
+}
+
+.header {
+    background-color: #333;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #1e90ff;
+    transform: scale(1.1);
+}
+
+.user-info-container {
+    color: #fff;
+    font-size: 14px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.user-info-static {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.user-info-full-name {
+    font-style: italic;
+}
