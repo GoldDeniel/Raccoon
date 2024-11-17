@@ -18,4 +18,16 @@ class User extends Model
 
         return false;
     }
+    public function registerUser($username, $password, $first_name, $last_name)
+    {
+        $user = $this->query("SELECT * FROM " . $this->table . " WHERE username = :username", ['username' => $username]);
+        
+        if (!empty($user)) {
+            return false;
+        }
+
+        $this->insert(['username' => $username, 'password' => $password, 'first_name' => $first_name, 'last_name' => $last_name]);
+        return true;
+        
+    }
 }
