@@ -33,4 +33,12 @@ class LoginController extends Controller
 			$this->view('login');
 		}
 	}
+	public function logout()
+	{
+		session_start();
+		session_unset();
+		session_destroy();
+		header('Location: ' . ROOT . '/login');
+		exit();
+	}
 }
