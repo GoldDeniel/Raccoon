@@ -6,5 +6,8 @@ class HomeController extends Controller
 	{
 		$this->view('home');
 	}
+	// TODO: Implement sending feedback to the admin, add author to the database, else null, or -1, up to you Dave
+
+	
 	
 }

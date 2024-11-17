@@ -2,8 +2,8 @@
 <html>
 <head>
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo ROOT ?>/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo ROOT ?>/css/login.css">
 </head>
 <body>
     <?php include_once '../app/views/elements/header.php'; ?>
