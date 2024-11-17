@@ -23,6 +23,8 @@ class LoginController extends Controller
 				session_start();
 				$_SESSION['user_id'] = $user->id;
 				$_SESSION['username'] = $user->username;
+				$_SESSION['first_name'] = $user->first_name;
+				$_SESSION['last_name'] = $user->last_name;
 				header('Location: ' . ROOT . '/feed');
 				exit();
 			} else {
