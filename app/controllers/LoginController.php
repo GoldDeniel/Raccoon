@@ -13,7 +13,7 @@ class LoginController extends Controller
 	{
 		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			$username = $_POST['username'];
-			$password = $_POST['password'];
+			$password = sha1($_POST['password']);
 
 			$userModel = new User();
 			$user = $userModel->verifyUser($username, $password);
