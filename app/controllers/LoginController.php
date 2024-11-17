@@ -26,10 +26,11 @@ class LoginController extends Controller
 				$_SESSION['first_name'] = $user->first_name;
 				$_SESSION['last_name'] = $user->last_name;
 				header('Location: ' . ROOT . '/feed');
-				exit();
+				return;
 			} else {
 				// Authentication failed, show an error message
 				$this->view('login', ['error' => 'Invalid username or password']);
+				return;
 			}
 		} else {
 			$this->view('login');

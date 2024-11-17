@@ -6,7 +6,15 @@ class Post extends Model
 
     public function getAllPosts()
     {
-        return $this->query("SELECT * FROM " . $this->table);
+        $raw_posts = $this->query("SELECT * FROM " . $this->table);
+        // convert author id to author username
+        $posts = [];
+        foreach ($raw_posts as $post) {
+            $author = $this->query("SELECT username FROM Users WHERE id = :id", ['id' => $post->author]);
+            $post->author = $author[0]->username;
+            $posts[] = $post;
+        }
+        return $posts;
     }
     public function createPost($title, $content)
     {
