@@ -1,7 +1,3 @@
-<style>
-
-</style>
-
 <header class="header">
     <nav class="nav">
         <div class="nav-container">

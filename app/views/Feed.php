@@ -12,6 +12,8 @@
     </center>
 
     <div class="feed-container">
+        <div class="posts-container">
+
         <?php if (!empty($data['posts'])): ?>
             <?php foreach ($data['posts'] as $post): ?>
                 <div class="post">
@@ -26,6 +28,7 @@
             <p>No posts available.</p>
         <?php endif; ?>
 
+        </div>
         <div class="message-box-container">
             <form action="/Raccoon/public/feed/create" method="POST">
                 <label for="title" class="message-title-label">Title:</label>
