@@ -3,10 +3,13 @@
 <head>
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/feed.css">
 </head>
 <body>
 <?php include_once '../app/views/elements/header.php'; ?>
-    <h1 class="feed-title">Feed</h1>
+    <center>
+        <h1 class="feed-title">Feed</h1>
+    </center>
 
     <div class="feed-container">
         <?php if (!empty($data['posts'])): ?>
@@ -14,6 +17,8 @@
                 <div class="post">
                     <h2 class="post-title"><?php echo htmlspecialchars($post->title); ?></h2>
                     <p class="post-content"><?php echo htmlspecialchars($post->content); ?></p>
+                    <p class="post-author"><?php echo htmlspecialchars($post->author); ?></p>
+                    <p class="post-date"><?php echo htmlspecialchars($post->created_at); ?></p>
                 </div>
         <?php endforeach; ?>
         
@@ -28,10 +33,16 @@
                 <br>
                 <label for="content" class="message-content-lable">Content:</label>
                 <textarea name="content" id="content" required class="message-content-textarea"></textarea>
-                <button type="submit" class="submit-button">Post</button>
+                
+
+                <center>
+                    <button type="submit" class="submit-button"><?php include_once '../app/views/elements/raccoon.php'; ?>Post</button>
+                </center>
             </form>
         </div>
-    </div>
+    </div>    
+    
+
             
 
 </body>

@@ -2,17 +2,21 @@
 .raccoon-img {
     clip-path: circle(50% at 50% 50%);
 }
-/* Dark-themed header styles */
 body {
     background-color: black;
     color: white;
+    background-image: url('../assets/wallpaper.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .header {
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 10px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 1rem;
+    backdrop-filter: blur(30rem);
+
 }
 
 .nav {

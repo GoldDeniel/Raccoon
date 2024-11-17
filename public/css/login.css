@@ -1,5 +1,5 @@
-.home-container {
-    max-width: 800px;
+.login-container {
+    max-width: 400px;
     margin: 50px auto;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -10,33 +10,18 @@
     text-align: center;
 }
 
-
-.home-title {
+.login-title {
     margin-bottom: 20px;
     color: #e0e0e0;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(30rem);
-    border-radius: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    width: fit-content;
-    padding-inline: 1rem;
-    margin-inline: auto;
 }
 
-.h2-title {
-    color: #e0e0e0;
-    margin-bottom: 20px;
-}
-
-.feedback-form {
+.login-form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.feedback-label {
+.login-label {
     font-size: 14px;
     color: #e0e0e0;
     margin-bottom: 5px;
@@ -44,8 +29,7 @@
     width: 100%;
 }
 
-.feedback-input,
-.feedback-textarea {
+.login-input {
     width: 80%;
     padding: 10px;
     margin-bottom: 10px;
@@ -55,17 +39,12 @@
     color: #e0e0e0;
 }
 
-.feedback-input:focus,
-.feedback-textarea:focus {
+.login-input:focus {
     border-color: #1e90ff;
     outline: none;
 }
 
-.feedback-textarea {
-    height: 10rem;
-}
-
-.feedback-submit {
+.login-button {
     width: 80%;
     padding: 10px;
     border: none;
@@ -78,6 +57,11 @@
     margin-top: 10px;
 }
 
-.feedback-submit:hover {
+.login-button:hover {
     background-color: #1c86ee;
+}
+
+.login-error {
+    color: red;
+    margin-top: 10px;
 }
