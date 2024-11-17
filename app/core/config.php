@@ -6,7 +6,7 @@ define('DBUSER', 'Raccoon');
 define('DBPASS', 'Raccoon');
 define('DBDRIVER', '');
 
-define('ROOT', 'http://localhost/mvc/public');
+define('ROOT', 'http://localhost/Raccoon/public');
 
 
 define('APP_NAME', "Raccoon");
