@@ -20,6 +20,17 @@
         <?php else: ?>
             <p>No posts available.</p>
         <?php endif; ?>
+
+        <div class="message-box-container">
+            <form action="/Raccoon/public/feed/create" method="POST">
+                <label for="title" class="message-title-label">Title:</label>
+                <input type="text" name="title" id="title" required class="message-title-input-text">
+                <br>
+                <label for="content" class="message-content-lable">Content:</label>
+                <textarea name="content" id="content" required class="message-content-textarea"></textarea>
+                <button type="submit" class="submit-button">Post</button>
+            </form>
+        </div>
     </div>
             
 

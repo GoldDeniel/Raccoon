@@ -14,5 +14,15 @@ class FeedController extends Controller
         $posts = $postModel->getAllPosts();
         $this->view('feed', ['posts' => $posts]);
 	}
+	public function create()
+	{
+		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+			$title = $_POST['title'];
+			$content = $_POST['content'];
+			$postModel = new Post();
+			$postModel->createPost($title, $content);
+			header('Location: ' . ROOT . '/feed');
+		}
+	}
 	
 }
