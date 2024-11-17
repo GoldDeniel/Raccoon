@@ -9,7 +9,10 @@ class User extends Model
         $query = "SELECT * FROM " . $this->table . " WHERE username = :username AND password = :password";
         $user = $this->query($query, ['username' => $username, 'password' => $password]);
 
-        if (!empty($user) && password_verify($password, $user[0]->password)) {
+        // if (!empty($user) && password_verify($password, $user[0]->password)) {
+        //     return $user[0];
+        // }
+        if (!empty($user)) {
             return $user[0];
         }
 

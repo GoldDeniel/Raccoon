@@ -14,11 +14,7 @@ class LoginController extends Controller
 		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			$username = $_POST['username'];
 			$password = $_POST['password'];
-	
-			// Debugging statements
-			echo "Username: " . htmlspecialchars($username) . "<br>";
-			echo "Password: " . htmlspecialchars($password) . "<br>";
-	
+
 			$userModel = new User();
 			$user = $userModel->verifyUser($username, $password);
 	
@@ -27,7 +23,7 @@ class LoginController extends Controller
 				session_start();
 				$_SESSION['user_id'] = $user->id;
 				$_SESSION['username'] = $user->username;
-				header('Location: /dashboard');
+				header('Location: ' . ROOT . '/feed');
 				exit();
 			} else {
 				// Authentication failed, show an error message
