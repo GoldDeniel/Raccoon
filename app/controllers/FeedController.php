@@ -7,12 +7,12 @@ class FeedController extends Controller
 	public function index()
 	{
 		if (!isset($_SESSION['user_id'])) {
-			header('Location: '.ROOT.'/login');
+			$this->view('login', ['error' => 'You must be logged in to view the feed.']);
 			return;
 		}
 		$postModel = new Post();
         $posts = $postModel->getAllPosts();
-        $this->view('Feed', ['Posts' => $posts]);
+        $this->view('feed', ['posts' => $posts]);
 	}
 	
 }
