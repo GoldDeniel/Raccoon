@@ -44,9 +44,6 @@
             </form>
         </div>
     </div>    
-    
-
-            
-
+    <?php include_once '../app/views/elements/footer.php'; ?>
 </body>
 </html>

@@ -18,7 +18,26 @@ body {
     backdrop-filter: blur(30rem);
 
 }
+.footer-container {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    backdrop-filter: blur(10rem);
+    height: fit-content;
+    width: fit-content;
+    padding-inline: 2rem;
+    padding-block: 5px;
+    margin: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: -1;
+}
 
+.footer-text-container {
+    margin: 0;
+    font-size: 14px;
+}
 .nav {
     display: flex;
     justify-content: center;
@@ -62,3 +81,43 @@ body {
 .user-info-full-name {
     font-style: italic;
 }
+
+/* RGB */
+
+.block {
+    position: relative;
+    margin: 50px auto;
+    width: fit-content;
+    height: fit-content;
+  }
+  
+  .block:before {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+      #0000ff, #00ff00,#ffff00, #ff0000);
+    background-size: 300%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -3;
+    animation: steam 20s linear infinite;
+    opacity: .4;
+  }
+  
+  @keyframes steam {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .block:before {
+    filter: blur(50px);
+  }
