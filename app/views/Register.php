@@ -10,7 +10,7 @@
     <div class="block">
         <div class="register-container">
             <h1 class="register-title">Register</h1>
-            <form action="/Raccoon/public/register/register" method="POST" class="register-form">
+            <form action="<?php echo ROOT ?>/register/register" method="POST" class="register-form">
                 <label for="first_name" class="register-label">First Name:</label>
                 <input type="text" name="first_name" id="first_name" required class="register-input">
                 <label for="last_name" class="register-label">Last Name:</label>
