@@ -5,6 +5,7 @@
             <a class="nav-link" href="/Raccoon/public/feed">Feed</a>
             <?php if (isset($_SESSION['role']) && $_SESSION['role'] == 2): ?>
                 <a class="nav-link" href="/Raccoon/public/comments">Comments</a>
+                <a class="nav-link" href="/Raccoon/public/export">Export data</a>
             <?php endif; ?>
             <?php if (isset($_SESSION['username'])): ?>
                 <div class="user-info-container">
@@ -21,7 +22,6 @@
 </header>
 
 <?php if (PERFORMANCE_MODE): ?>
-    //Ez a szar 
     <script>
         window.onload = function() {
             const allElements = document.querySelectorAll('*');

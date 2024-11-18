@@ -1,0 +1,50 @@
+:root {
+    --text-primary: #e0e0e0;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --button-hover: rgba(255, 255, 255, 0.1);
+}
+
+.export-container {
+    max-width: 900px;
+    width: 90%;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.export-title {
+    color: var(--text-primary);
+    font-size: 28px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    padding: 15px 30px;
+    display: inline-block;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.export-button {
+    padding: 12px 40px;
+    font-size: 18px;
+    background-color: #1e90ff;
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.export-button:hover {
+    background-color: #1c86ee;
+}
