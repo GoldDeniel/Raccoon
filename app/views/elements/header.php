@@ -21,7 +21,6 @@
 </header>
 
 <?php if (PERFORMANCE_MODE): ?>
-    //Ez a szar 
     <script>
         window.onload = function() {
             const allElements = document.querySelectorAll('*');
