@@ -1,0 +1,84 @@
+:root {
+    --bg-primary: rgba(0, 0, 0, 0.7);
+    --text-primary: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --text-muted: #888;
+    --border-color: rgba(255, 255, 255, 0.1);
+}
+
+.contact-container {
+    max-width: 900px;
+    width: 90%;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--bg-primary);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.h2-title {
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.comment-container {
+    height: 500px; /* Fixed height */
+    overflow-y: auto; /* Enables scrolling */
+    display: grid;
+    gap: 20px;
+    padding-right: 15px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,0.3) transparent;
+}
+
+.comments {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.comment-title {
+    font-size: 22px;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.comment-content {
+    font-size: 18px;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.comment-author {
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.comment-date {
+    font-size: 14px;
+    color: rgba(255,255,255,0.5);
+    text-align: right;
+}
+
+/* Custom scrollbar for webkit browsers */
+.comment-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.comment-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.comment-container::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 4px;
+}

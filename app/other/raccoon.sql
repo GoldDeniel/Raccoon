@@ -12,7 +12,8 @@ CREATE TABLE `Raccoon`.`Users` (
      `first_name` TEXT NOT NULL ,
       `last_name` TEXT NULL ,
        `password` TEXT NOT NULL COMMENT 'Hashed password' ,
-        `username` TEXT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+        `username` TEXT NOT NULL , 
+         `role` INT NOT NULL DEFAULT 1 , PRIMARY KEY (`id`)) ENGINE = InnoDB;
 
 CREATE TABLE `Raccoon`.`Posts` (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -28,5 +29,5 @@ CREATE TABLE `Raccoon`.`Messages` (
       `email` TEXT NOT NULL ,
        `mobile` TEXT NULL ,
         `author` INT NOT NULL ,
-         `created_at` DATE NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+         `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB;
 
