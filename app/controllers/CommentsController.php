@@ -7,7 +7,7 @@ class CommentsController extends Controller {
 			$this->view('404');
 			return;
 		}
-        if (isset($_SESSION['role']) && $_SESSION['role'] == 1) {
+        if (isset($_SESSION['role']) && $_SESSION['role'] != 2) {
             $this->view('404');
             return;
         }
