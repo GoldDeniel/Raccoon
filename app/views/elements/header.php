@@ -3,6 +3,9 @@
         <div class="nav-container">
             <a class="nav-link" href="/Raccoon/public/home">Home</a>
             <a class="nav-link" href="/Raccoon/public/feed">Feed</a>
+            <?php if (isset($_SESSION['role']) && $_SESSION['role'] == 2): ?>
+                <a class="nav-link" href="/Raccoon/public/comments">Comments</a>
+            <?php endif; ?>
             <?php if (isset($_SESSION['username'])): ?>
                 <div class="user-info-container">
                     <span class="user-info-static">Logged in as:</span>
@@ -18,6 +21,7 @@
 </header>
 
 <?php if (PERFORMANCE_MODE): ?>
+    //Ez a szar 
     <script>
         window.onload = function() {
             const allElements = document.querySelectorAll('*');
