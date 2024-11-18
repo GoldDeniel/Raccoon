@@ -15,6 +15,14 @@ class ExportController extends Controller
 
 	public function index()
 	{
+        if (!isset($_SESSION['user_id'])) {     
+			$this->view('404');
+			return;
+		}
+        if (isset($_SESSION['role']) && $_SESSION['role'] != 2) {
+            $this->view('404');
+            return;
+        }
         $this->view('export');
 	}
 
@@ -28,6 +36,14 @@ class ExportController extends Controller
 
 
     public function exportPDF() {
+        if (!isset($_SESSION['user_id'])) {     
+			$this->view('404');
+			return;
+		}
+        if (isset($_SESSION['role']) && $_SESSION['role'] != 2) {
+            $this->view('404');
+            return;
+        }
         $this->cleanOutput();
     
         try {
@@ -51,6 +67,14 @@ class ExportController extends Controller
     }
 
     public function exportExcel() {
+        if (!isset($_SESSION['user_id'])) {     
+			$this->view('404');
+			return;
+		}
+        if (isset($_SESSION['role']) && $_SESSION['role'] != 2) {
+            $this->view('404');
+            return;
+        }
         $this->cleanOutput();
     
         // Excel file name for download
