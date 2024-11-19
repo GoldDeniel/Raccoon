@@ -1,7 +1,7 @@
 <?php
     
     class Comment extends Model {
-        protected $table = "messages";
+        protected $table = "Messages";
 
         public function getAllComments()
         {

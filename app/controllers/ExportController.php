@@ -1,14 +1,12 @@
 <?php
 
 require_once '../app/models/User.php';
-require_once '../app/vendor/tcpdf/tcpdf.php';
-
+//require_once '../app/vendor/tcpdf/tcpdf.php';
+require_once '../app/vendor/TCPDF/tcpdf.php';
 
 class ExportController extends Controller
 {
-
     private $userModel;
-
     public function __construct() {
         $this->userModel = new User();
     }
@@ -162,7 +160,7 @@ class ExportController extends Controller
             // Add some spacing after the title
             $pdf->Ln(10);
 
-            // Set font for table header
+            // Set font for table headerexport
             $pdf->SetFont('helvetica', 'B', 11);
 
             // Create the table header with improved styling

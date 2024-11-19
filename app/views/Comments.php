@@ -9,7 +9,7 @@
     <?php include_once '../app/views/elements/header.php'; ?>
     <div class="contact-container">
         <div class="content">
-            <h2 class="h2-title">Here you can see the contacts, which sent by the users</h2>
+            <h2 class="h2-title">Here you can see the contacts, which were sent by the users</h2>
         </div>
         <div class="comment-container">
             <?php if (!empty($data['comments'])): ?>
