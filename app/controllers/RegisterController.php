@@ -23,11 +23,11 @@ class RegisterController extends Controller
 				return;
 			}
 
-			$this->view('login');
+			header('Location: ' . ROOT . '/login');
 
 			
 		} else {
-			$this->view('register');
+			header('Location: ' . ROOT . '/register');
 		}
 	}
 }
