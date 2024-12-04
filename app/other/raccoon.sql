@@ -32,7 +32,7 @@ CREATE TABLE `Raccoon`.`Messages` (
          `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB;
 
 
-INSERT INTO `Users` (`id`, `first_name`, `last_name`, `password`, `username`, `role`) VALUES ('1', '', NULL, SHA1('admin'), 'admin', '2');
+INSERT INTO `Users` (`id`, `first_name`, `last_name`, `password`, `username`, `role`) VALUES ('1', '', '', SHA1('admin'), 'admin', '2');
 INSERT INTO `Users` (`id`, `first_name`, `last_name`, `password`, `username`, `role`) VALUES ('2', 'Janos', 'Vezeték', SHA1('user'), 'user', '1');
 
 
